@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Godwin Bakeloula - Data Engineer</title>
+    <title>Jonathan Godwin - Data Science/Data Engineer/ML Engineer</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
             min-height: 100vh;
         }
 
@@ -44,9 +44,12 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #667eea;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
@@ -63,7 +66,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #e91e63;
         }
 
         .hero {
@@ -73,40 +76,63 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
             animation: fadeInUp 1s ease;
+            font-weight: 700;
         }
 
         .hero h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 300;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s both;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.3rem;
+            max-width: 700px;
             margin: 0 auto 2rem;
             animation: fadeInUp 1s ease 0.4s both;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .cta-button {
             display: inline-block;
             background: white;
-            color: #667eea;
-            padding: 12px 30px;
+            color: #e91e63;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 1s ease 0.6s both;
+            font-size: 1.1rem;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: #e91e63;
         }
 
         section {
@@ -120,18 +146,19 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 3rem;
             color: #333;
             position: relative;
+            font-weight: 700;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
             margin: 20px auto;
             border-radius: 2px;
         }
@@ -145,41 +172,67 @@
 
         .card {
             background: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .card h3 {
-            color: #667eea;
+            color: #e91e63;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             margin-top: 2rem;
         }
 
         .tech-category {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 30px;
+            border-radius: 15px;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
         }
 
         .tech-category h4 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: 600;
             border-bottom: 2px solid #f0f0f0;
             padding-bottom: 10px;
         }
@@ -187,60 +240,149 @@
         .tech-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
         }
 
         .tech-tag {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
             color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 8px 16px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            transform: scale(1.05);
         }
 
         .learning-tag {
-            background: linear-gradient(45deg, #ffa726, #ff7043);
+            background: linear-gradient(45deg, #ff5722, #ff9800);
             color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 8px 16px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
-        }
-
-        .project-card {
             position: relative;
             overflow: hidden;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+        .learning-tag::before {
+            content: '🚀';
+            margin-right: 5px;
         }
 
         .interests-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 2rem;
         }
 
         .interest-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
             color: white;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .interest-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .cv-download {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cv-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
+        }
+
+        .cv-icon {
+            font-size: 4rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
         }
 
         footer {
@@ -248,26 +390,6 @@
             color: white;
             text-align: center;
             padding: 40px 0;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-        }
-
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.1);
-            transition: background 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
         }
 
         @keyframes fadeInUp {
@@ -294,24 +416,20 @@
                 font-size: 1.2rem;
             }
 
-            .grid {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .grid, .tech-grid, .interests-grid {
                 grid-template-columns: 1fr;
             }
 
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .interests-grid {
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-
-        /* Animation sur scroll */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
@@ -322,17 +440,59 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .project-details {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .project-highlight {
+            font-style: italic;
+            color: #e91e63;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        .formation-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .formation-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .formation-title {
+            font-weight: 600;
+            color: #e91e63;
+            font-size: 1.1rem;
+        }
+
+        .formation-school {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .formation-year {
+            font-size: 0.9rem;
+            color: #999;
+        }
     </style>
 </head>
-<body class="smooth-scroll">
+<body>
     <header>
         <nav>
-            <div class="logo">JGB</div>
+            <div class="logo">Jonathan Godwin</div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="#interets">Centres d'intérêt</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#interets">Intérêts</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -340,10 +500,13 @@
 
     <section id="accueil" class="hero">
         <div class="container">
-            <h1>Jonathan Godwin Bakeloula</h1>
-            <h2>Étudiant en 4ème année - Polytech Lille</h2>
-            <p>Spécialisation Informatique & Statistiques | Futur Data Engineer passionné par l'analyse de données et les technologies innovantes</p>
-            <a href="#competences" class="cta-button">Découvrir mon profil</a>
+            <h1>Jonathan Godwin</h1>
+            <h2>Alternant Data Science / Data Engineer / ML Engineer</h2>
+            <p>Étudiant en 4ème année à Polytech Lille, passionné par le data engineering, je suis à la recherche d'une alternance sur 2 ans. Je suis ouvert aux opportunités entre Lille et Paris !</p>
+            <div class="cta-buttons">
+                <a href="#competences" class="cta-button">Découvrir mes compétences</a>
+                <a href="#cv" class="cta-button secondary">Télécharger mon CV</a>
+            </div>
         </div>
     </section>
 
@@ -353,26 +516,27 @@
             
             <div class="tech-grid animate-on-scroll">
                 <div class="tech-category">
-                    <h4>Langages de Programmation</h4>
+                    <h4>Langages & Outils</h4>
                     <div class="tech-list">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">SQL</span>
                         <span class="tech-tag">Java</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">C/C++</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Docker</span>
                     </div>
                 </div>
 
                 <div class="tech-category">
-                    <h4>Data Science & Analytics</h4>
+                    <h4>Data & MLOps</h4>
                     <div class="tech-list">
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Seaborn</span>
-                        <span class="tech-tag">Jupyter</span>
+                        <span class="tech-tag">Airflow</span>
+                        <span class="tech-tag">dbt</span>
+                        <span class="learning-tag">Kedro</span>
+                        <span class="tech-tag">Structuration de projets</span>
+                        <span class="tech-tag">Tests unitaires</span>
                     </div>
                 </div>
 
@@ -381,42 +545,33 @@
                     <div class="tech-list">
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">SQLite</span>
                     </div>
                 </div>
 
                 <div class="tech-category">
-                    <h4>Outils & Technologies</h4>
+                    <h4>Web & APIs</h4>
                     <div class="tech-list">
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">Apache Spark</span>
-                        <span class="learning-tag">Kubernetes</span>
-                        <span class="learning-tag">Apache Kafka</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">API REST</span>
                     </div>
                 </div>
 
                 <div class="tech-category">
-                    <h4>En Cours d'Apprentissage</h4>
+                    <h4>Data Viz / BI</h4>
                     <div class="tech-list">
-                        <span class="learning-tag">Apache Airflow</span>
-                        <span class="learning-tag">Snowflake</span>
-                        <span class="learning-tag">Terraform</span>
-                        <span class="learning-tag">AWS Services</span>
-                        <span class="learning-tag">Azure</span>
+                        <span class="tech-tag">Plotly</span>
+                        <span class="learning-tag">Metabase</span>
                     </div>
                 </div>
 
                 <div class="tech-category">
-                    <h4>Statistiques & Machine Learning</h4>
+                    <h4>Méthodologies</h4>
                     <div class="tech-list">
-                        <span class="tech-tag">Statistiques descriptives</span>
-                        <span class="tech-tag">Régression</span>
-                        <span class="tech-tag">Classification</span>
-                        <span class="tech-tag">Time Series</span>
-                        <span class="learning-tag">Deep Learning</span>
+                        <span class="tech-tag">Gestion de projets</span>
+                        <span class="tech-tag">Modélisation dimensionnelle</span>
+                        <span class="tech-tag">Versionnage</span>
+                        <span class="tech-tag">Tests unitaires</span>
                     </div>
                 </div>
             </div>
@@ -425,49 +580,77 @@
 
     <section id="projets">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Projets Réalisés</h2>
+            <h2 class="section-title animate-on-scroll">Projets Pertinents</h2>
             
             <div class="grid animate-on-scroll">
-                <div class="card project-card">
-                    <h3>Système de Recommandation E-commerce</h3>
-                    <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Flask</p>
-                    <p>Développement d'un système de recommandation collaborative pour une plateforme e-commerce. Implémentation d'algorithmes de filtrage collaboratif et de contenu, avec une API REST pour l'intégration.</p>
-                    <p><em>Amélioration de 25% du taux de conversion</em></p>
+                <div class="card">
+                    <h3>Pipeline de données local simulé</h3>
+                    <p class="project-details"><strong>Projet personnel</strong></p>
+                    <p>Architecture locale simulée : ingestion, transformation, modélisation</p>
+                    <p><strong>Technologies :</strong> Airflow + dbt + Docker</p>
+                    <p>Modélisation dimensionnelle (schéma en étoile)</p>
+                    <p class="project-highlight">Préparation à la visualisation via Metabase</p>
                 </div>
 
-                <div class="card project-card">
-                    <h3>Pipeline ETL pour Données Météorologiques</h3>
-                    <p><strong>Technologies:</strong> Python, Apache Airflow, PostgreSQL, Docker</p>
-                    <p>Création d'un pipeline automatisé pour l'extraction, transformation et chargement de données météorologiques depuis plusieurs APIs. Orchestration avec Airflow et stockage optimisé.</p>
-                    <p><em>Traitement de 100k+ enregistrements/jour</em></p>
+                <div class="card">
+                    <h3>Application Flask de visualisation de données aériennes</h3>
+                    <p>API + dashboard interactif avec Flask & Plotly</p>
+                    <p>Structuration en modules, gestion des appels REST</p>
+                    <p><strong>Technologies :</strong> Flask, Plotly, API REST</p>
                 </div>
 
-                <div class="card project-card">
-                    <h3>Analyse Prédictive des Ventes</h3>
-                    <p><strong>Technologies:</strong> R, ggplot2, Prophet, Shiny</p>
-                    <p>Modélisation prédictive des ventes avec analyse de séries temporelles. Dashboard interactif Shiny pour visualisation des prévisions et identification des tendances saisonnières.</p>
-                    <p><em>Précision de prédiction: 89%</em></p>
+                <div class="card">
+                    <h3>Développement backend – App mobile pour alternants</h3>
+                    <p><strong>Technologies :</strong> ExpressJS + PostgreSQL</p>
+                    <p>Gestion projet (découpage phases, suivi, priorisation)</p>
                 </div>
 
-                <div class="card project-card">
-                    <h3>Clustering de Comportements Clients</h3>
-                    <p><strong>Technologies:</strong> Python, K-means, PCA, Plotly</p>
-                    <p>Segmentation automatisée de la clientèle basée sur les comportements d'achat. Réduction de dimensionnalité et visualisation interactive des clusters identifiés.</p>
-                    <p><em>5 segments clients distincts identifiés</em></p>
+                <div class="card">
+                    <h3>Système expert en Java</h3>
+                    <p class="project-details"><strong>Projet académique</strong></p>
+                    <p>Implémentation d'un moteur d'inférence sur règles simples</p>
+                    <p><strong>Technologies :</strong> Java</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Formation</h2>
+            
+            <div class="grid animate-on-scroll">
+                <div class="card">
+                    <div class="formation-item">
+                        <div class="formation-title">Polytech Lille — Ingénierie Informatique & Statistiques</div>
+                        <div class="formation-year">(2024 - 2027)</div>
+                    </div>
+                    
+                    <div class="formation-item">
+                        <div class="formation-title">Université de Caen-Normandie — Licence 1 & 2 Informatique</div>
+                        <div class="formation-year">(2022 - 2024)</div>
+                    </div>
+                    
+                    <div class="formation-item">
+                        <div class="formation-title">Baccalauréat Scientifique — Lycée Charlemagne</div>
+                        <div class="formation-school">Mention Très Bien</div>
+                        <div class="formation-year">(2022)</div>
+                    </div>
                 </div>
 
-                <div class="card project-card">
-                    <h3>Dashboard Business Intelligence</h3>
-                    <p><strong>Technologies:</strong> Power BI, SQL Server, DAX</p>
-                    <p>Conception d'un tableau de bord interactif pour le suivi des KPIs business. Connexion en temps réel aux bases de données et création de métriques personnalisées.</p>
-                    <p><em>Utilisé par 15+ parties prenantes</em></p>
-                </div>
-
-                <div class="card project-card">
-                    <h3>API de Classification d'Images</h3>
-                    <p><strong>Technologies:</strong> Python, TensorFlow, FastAPI, Docker</p>
-                    <p>Développement d'une API de classification d'images utilisant des réseaux de neurones convolutionnels. Déploiement containerisé avec documentation Swagger automatique.</p>
-                    <p><em>Précision: 94% sur dataset de test</em></p>
+                <div class="card">
+                    <h3>Expérience Professionnelle</h3>
+                    <div class="formation-item">
+                        <div class="formation-title">Pulce Conseil – Junior Entreprise Polytech Lille</div>
+                        <div class="formation-school">Développeur backend (2025)</div>
+                        <p>Planification des phases projet, gestion backend</p>
+                        <p>Travail collaboratif, versionnage, livrables professionnels</p>
+                    </div>
+                    
+                    <div class="formation-item">
+                        <div class="formation-title">McDonald's</div>
+                        <div class="formation-school">Équipier polyvalent</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -475,50 +658,98 @@
 
     <section id="interets">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Centres d'Intérêt</h2>
+            <h2 class="section-title animate-on-scroll">Langues et Intérêts</h2>
             
             <div class="interests-grid animate-on-scroll">
                 <div class="interest-card">
                     <div class="interest-icon">🌍</div>
+                    <h3>Langues</h3>
+                    <p><strong>Français :</strong> Natif<br>
+                    <strong>Anglais :</strong> B2<br>
+                    <strong>Espagnol :</strong> B1</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">💼</div>
+                    <h3>Intelligence Économique</h3>
+                    <p>Passion pour l'analyse stratégique et la veille concurrentielle dans un contexte économique globalisé.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">🌐</div>
                     <h3>Géopolitique</h3>
-                    <p>Passionné par l'analyse des relations internationales et des enjeux géostratégiques contemporains. Suivi actif de l'actualité mondiale et des transformations géopolitiques.</p>
+                    <p>Suivi des enjeux géopolitiques internationaux et analyse des relations entre États.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">🏃</div>
+                    <h3>Semi-marathon</h3>
+                    <p>Course de fond et préparation physique, discipline et dépassement de soi.</p>
                 </div>
 
                 <div class="interest-card">
                     <div class="interest-icon">🎵</div>
-                    <h3>Poésie Chantée</h3>
-                    <p>Expression artistique à travers la poésie mise en musique. Exploration de la musicalité des mots et création de compositions originales mêlant littérature et mélodie.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="interest-icon">✍️</div>
-                    <h3>Poésie & Écriture</h3>
-                    <p>Création poétique comme moyen d'expression personnelle et de réflexion. Exploration de différentes formes littéraires et participation à des ateliers d'écriture créative.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="interest-icon">📊</div>
-                    <h3>Data Storytelling</h3>
-                    <p>Passion pour la narration à travers les données. Transformation d'analyses complexes en histoires compréhensibles et engageantes pour différents publics.</p>
+                    <h3>Musique</h3>
+                    <p>Pratique musicale et appréciation de différents genres musicaux.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <section id="cv" class="cv-download">
         <div class="container">
-            <h2>Contactez-moi</h2>
-            <p>Étudiant motivé et disponible pour des opportunités de stage ou projets collaboratifs</p>
-            
-            <div class="contact-links">
-                <a href="mailto:jonathan.bakeloula@example.com">📧 Email</a>
-                <a href="https://linkedin.com/in/jonathan-bakeloula" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/jonathan-bakeloula" target="_blank">💻 GitHub</a>
+            <h2 class="section-title animate-on-scroll">Télécharger mon CV</h2>
+            <div class="cv-card animate-on-scroll">
+                <div class="cv-icon">📄</div>
+                <h3>CV Jonathan Godwin</h3>
+                <p>Téléchargez mon CV complet au format PDF pour découvrir en détail mon parcours, mes compétences et mes projets.</p>
+                
+                <!-- Pour un site statique GitHub Pages, vous devrez : -->
+                <!-- 1. Ajouter votre CV PDF dans le dossier du repo -->
+                <!-- 2. Remplacer "cv-jonathan-godwin.pdf" par le nom de votre fichier -->
+                <a href="cv-jonathan-godwin.pdf" class="download-btn" download="CV_Jonathan_Godwin.pdf">
+                    📥 Télécharger le CV (PDF)
+                </a>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                    Dernière mise à jour : Janvier 2025
+                </p>
             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Contactez-moi</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Ouvert aux opportunités d'alternance entre Lille et Paris</p>
             
-            <p style="margin-top: 30px; opacity: 0.7;">
-                © 2025 Jonathan Godwin Bakeloula - Tous droits réservés
-            </p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📱 Téléphone</h4>
+                    <p>07 69 88 01 64</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>bakeloulajg@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>📍 Localisation</h4>
+                    <p>Villeneuve-d'Ascq, 59650</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>💼 Disponibilité</h4>
+                    <p>Alternance 2 ans<br>Lille - Paris</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jonathan Godwin - Tous droits réservés</p>
         </div>
     </footer>
 
@@ -537,7 +768,6 @@
             });
         }, observerOptions);
 
-        // Observer tous les éléments avec la classe animate-on-scroll
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
@@ -557,13 +787,24 @@
         });
 
         // Animation des cards au survol
-        document.querySelectorAll('.card').forEach(card => {
+        document.querySelectorAll('.card, .interest-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-8px) scale(1.02)';
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Animation des tech tags
+        document.querySelectorAll('.tech-tag, .learning-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
             });
         });
     </script>
