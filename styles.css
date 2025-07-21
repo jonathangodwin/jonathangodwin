@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #2a2a2a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Arrière-plan géométrique */
+.geometric-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.square {
+    position: absolute;
+    background: #a855f7;
+    opacity: 0.6;
+}
+
+.square:nth-child(1) { width: 80px; height: 80px; top: 10%; left: 5%; }
+.square:nth-child(2) { width: 60px; height: 60px; top: 20%; right: 10%; }
+.square:nth-child(3) { width: 100px; height: 100px; top: 60%; left: 15%; }
+.square:nth-child(4) { width: 120px; height: 120px; top: 70%; right: 20%; }
+.square:nth-child(5) { width: 40px; height: 40px; top: 35%; left: 70%; }
+.square:nth-child(6) { width: 90px; height: 90px; top: 80%; left: 60%; }
+.square:nth-child(7) { width: 70px; height: 70px; top: 15%; left: 40%; }
+.square:nth-child(8) { width: 50px; height: 50px; top: 45%; right: 5%; }
+
+/* En-tête */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(42, 42, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a855f7;
+}
+
+/* Section héro */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    line-height: 0.9;
+}
+
+.hero-content .subtitle {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 300;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.hero-content .description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.description p {
+    color: rgba(168, 85, 247, 0.3);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #a855f7;
+    color: #a855f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.btn:hover {
+    background: #a855f7;
+    color: #2a2a2a;
+}
+
+.btn.primary {
+    background: #a855f7;
+    color: #2a2a2a;
+}
+
+.btn.primary:hover {
+    background: transparent;
+    color: #a855f7;
+}
+
+/* Sections */
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/* Grille des compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-category {
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    padding: 2rem;
+    position: relative;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #a855f7, transparent, #a855f7);
+    z-index: -1;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: #a855f7;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid #a855f7;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.learning-tag {
+    background: rgba(251, 146, 60, 0.2);
+    border: 1px solid #fb923c;
+    color: #fb923c;
+}
+
+/* Grille des projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: rgba(168, 85, 247, 0.05);
+    border: 2px solid rgba(168, 85, 247, 0.2);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #a855f7;
+}
+
+.project-card .project-type {
+    font-size: 0.9rem;
+    color: #fb923c;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.project-highlight {
+    color: #a855f7;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Section formation */
+.formation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.formation-card {
+    background: rgba(168, 85, 247, 0.05);
+    border: 2px solid rgba(168, 85, 247, 0.2);
+    padding: 2rem;
+}
+
+.formation-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.formation-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.formation-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a855f7;
+    margin-bottom: 0.5rem;
+}
+
+.formation-year {
+    font-size: 0.9rem;
+    color: #fb923c;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formation-description {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Grille des centres d'intérêt */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.interest-card {
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.interest-card:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.2);
+}
+
+.interest-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.interest-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #a855f7;
+}
+
+/* Section CV */
+.cv-section {
+    text-align: center;
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.cv-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid #a855f7;
+    padding: 3rem;
+}
+
+.cv-icon {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.download-btn {
+    background: #a855f7;
+    color: #2a2a2a;
+    padding: 1rem 2rem;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 1rem;
+}
+
+.download-btn:hover {
+    background: transparent;
+    color: #a855f7;
+    border: 2px solid #a855f7;
+}
+
+/* Section contact */
+.contact-section {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #a855f7;
+}
+
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #a855f7;
+}
+
+.social-links {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #a855f7;
+    color: #a855f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #a855f7;
+    color: #2a2a2a;
+}
+
+/* Pied de page */
+footer {
+    background: #1a1a1a;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .formation-grid,
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Animations */
+.animate-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.animate-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.square {
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+.square:nth-child(odd) {
+    animation-direction: alternate-reverse;
+}
+
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
