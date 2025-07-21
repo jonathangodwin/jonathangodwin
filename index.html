@@ -16,11 +16,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
-            min-height: 100vh;
+            color: #2c3e50;
+            background-color: #ffffff;
         }
 
         .container {
@@ -29,15 +28,15 @@
             padding: 0 20px;
         }
 
+        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -48,12 +47,9 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
         }
 
         .nav-links {
@@ -64,43 +60,42 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #2c3e50;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #d81b60;
+            color: #3498db;
         }
 
+        /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             text-align: center;
-            color: white;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            animation: fadeInUp 1s ease;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
             font-weight: 700;
         }
 
         .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 300;
+            font-size: 1.5rem;
+            color: #34495e;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.2s both;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-weight: 400;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            color: #5a6c7d;
             max-width: 700px;
             margin: 0 auto 2rem;
-            animation: fadeInUp 1s ease 0.4s both;
-            font-weight: 300;
+            line-height: 1.7;
         }
 
         .cta-buttons {
@@ -108,207 +103,294 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #d81b60;
-            padding: 15px 35px;
-            border-radius: 50px;
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .cta-button:hover {
+            background: #2980b9;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button.secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: #3498db;
+            border: 2px solid #3498db;
         }
 
         .cta-button.secondary:hover {
-            background: white;
-            color: #d81b60;
+            background: #3498db;
+            color: white;
         }
 
+        /* Sections */
         section {
             padding: 80px 0;
-            background: white;
         }
 
         section:nth-child(even) {
-            background: #f8f9fa;
+            background-color: #f8f9fa;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
-            position: relative;
+            color: #2c3e50;
             font-weight: 700;
+            position: relative;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            width: 60px;
+            height: 3px;
+            background: #3498db;
             margin: 20px auto;
-            border-radius: 2px;
         }
 
+        /* Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 3rem;
         }
 
         .card {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            color: #333;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            border: 1px solid #e9ecef;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         .card h3 {
-            color: #d81b60;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
         }
 
+        .card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Technologies */
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 2rem;
         }
 
         .tech-category {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tech-category::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
         }
 
         .tech-category h4 {
-            color: #d81b60;
+            color: #2c3e50;
             margin-bottom: 20px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 2px solid #e9ecef;
             padding-bottom: 10px;
         }
 
         .tech-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .tech-tag {
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            background: #3498db;
             color: white;
-            padding: 8px 16px;
-            border-radius: 25px;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: transform 0.2s ease;
-        }
-
-        .tech-tag:hover {
-            transform: scale(1.05);
+            border: none;
         }
 
         .learning-tag {
-            background: linear-gradient(45deg, #ff5722, #ff9800);
+            background: #e67e22;
             color: white;
-            padding: 8px 16px;
-            border-radius: 25px;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
-            position: relative;
-            overflow: hidden;
+            border: none;
         }
 
         .learning-tag::before {
-            content: '🚀';
-            margin-right: 5px;
+            content: '📚 ';
         }
 
+        /* Project Details */
+        .project-details {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        .project-highlight {
+            color: #3498db;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        /* Formation */
+        .formation-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .formation-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .formation-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .formation-school {
+            color: #5a6c7d;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .formation-year {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        /* Interests */
         .interests-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 2rem;
         }
 
         .interest-card {
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
-            color: white;
-            padding: 40px 30px;
-            border-radius: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
         }
 
         .interest-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
         }
 
         .interest-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             display: block;
         }
 
-        .contact-info {
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+        .interest-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .interest-card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+
+        /* CV Download */
+        .cv-download {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cv-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+        }
+
+        .cv-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .cv-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .cv-card p {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: #27ae60;
             color: white;
-            padding: 60px 0;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: #219a52;
+            transform: translateY(-2px);
+        }
+
+        /* Contact */
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 80px 0;
             text-align: center;
         }
 
@@ -322,92 +404,73 @@
         .contact-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+            border-radius: 12px;
             transition: background 0.3s ease;
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .contact-item h4 {
             font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: 600;
-        }
-
-        .cv-download {
-            background: #f8f9fa;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .cv-card {
-            background: white;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cv-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-        }
-
-        .cv-icon {
-            font-size: 4rem;
-            color: #d81b60;
-            margin-bottom: 20px;
-        }
-
-        .download-btn {
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
             color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-item p {
+            color: #ecf0f1;
+        }
+
+        .contact-item a {
+            color: #ecf0f1;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
         }
 
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
-        }
-
-        footer {
-            background: #333;
+        .contact-item a:hover {
             color: white;
+        }
+
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links p {
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
+        .social-links div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #34495e;
+            color: #ecf0f1;
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -421,9 +484,8 @@
                 font-size: 1.2rem;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .section-title {
+                font-size: 2rem;
             }
 
             .grid, .tech-grid, .interests-grid {
@@ -433,8 +495,14 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
+        /* Animation simple */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
@@ -446,47 +514,22 @@
             transform: translateY(0);
         }
 
-        .project-details {
-            font-size: 0.95rem;
-            color: #555;
-            margin: 10px 0;
-            font-weight: 500;
+        /* Amélioration de l'accessibilité */
+        :focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
         }
 
-        .project-highlight {
-            font-style: italic;
-            color: #d81b60;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-
-        .formation-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .formation-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .formation-title {
-            font-weight: 600;
-            color: #d81b60;
-            font-size: 1.1rem;
-        }
-
-        .formation-school {
-            color: #555;
-            margin: 5px 0;
-            font-weight: 500;
-        }
-
-        .formation-year {
-            font-size: 0.95rem;
-            color: #777;
-            font-weight: 500;
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     </style>
 </head>
@@ -625,10 +668,11 @@
 
     <section id="formation">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Formation</h2>
+            <h2 class="section-title animate-on-scroll">Formation & Expérience</h2>
             
             <div class="grid animate-on-scroll">
                 <div class="card">
+                    <h3>Formation</h3>
                     <div class="formation-item">
                         <div class="formation-title">Polytech Lille — Ingénierie Informatique & Statistiques</div>
                         <div class="formation-year">(2024 - 2027)</div>
@@ -658,6 +702,7 @@
                     <div class="formation-item">
                         <div class="formation-title">McDonald's</div>
                         <div class="formation-school">Équipier polyvalent</div>
+                        <p>Développement des compétences en travail d'équipe et gestion du stress</p>
                     </div>
                 </div>
             </div>
@@ -666,7 +711,7 @@
 
     <section id="interets">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Langues et Intérêts</h2>
+            <h2 class="section-title animate-on-scroll">Langues & Centres d'Intérêt</h2>
             
             <div class="interests-grid animate-on-scroll">
                 <div class="interest-card">
@@ -706,20 +751,17 @@
 
     <section id="cv" class="cv-download">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Télécharger mon CV</h2>
+            <h2 class="section-title animate-on-scroll">Mon CV</h2>
             <div class="cv-card animate-on-scroll">
                 <div class="cv-icon">📄</div>
                 <h3>CV Jonathan Godwin</h3>
                 <p>Téléchargez mon CV complet au format PDF pour découvrir en détail mon parcours, mes compétences et mes projets.</p>
                 
-                <!-- Pour un site statique GitHub Pages, vous devrez : -->
-                <!-- 1. Ajouter votre CV PDF dans le dossier du repo -->
-                <!-- 2. Remplacer "cv-jonathan-godwin.pdf" par le nom de votre fichier -->
                 <a href="cv-jonathan-godwin.pdf" class="download-btn" download="CV_Jonathan_Godwin.pdf">
                     📥 Télécharger le CV (PDF)
                 </a>
                 
-                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #7f8c8d;">
                     Dernière mise à jour : Janvier 2025
                 </p>
             </div>
@@ -728,18 +770,18 @@
 
     <section id="contact" class="contact-info">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">Contactez-moi</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 40px;">Ouvert aux opportunités d'alternance entre Lille et Paris</p>
+            <h2 style="color: white; margin-bottom: 20px;">Me Contacter</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ecf0f1;">Ouvert aux opportunités d'alternance entre Lille et Paris</p>
             
             <div class="contact-grid">
                 <div class="contact-item">
                     <h4>📱 Téléphone</h4>
-                    <p><a href="tel:+33769880164" style="color: white; text-decoration: none;">07 69 88 01 64</a></p>
+                    <p><a href="tel:+33769880164">07 69 88 01 64</a></p>
                 </div>
                 
                 <div class="contact-item">
                     <h4>📧 Email</h4>
-                    <p><a href="mailto:bakeloulajg@gmail.com" style="color: white; text-decoration: none;">bakeloulajg@gmail.com</a></p>
+                    <p><a href="mailto:bakeloulajg@gmail.com">bakeloulajg@gmail.com</a></p>
                 </div>
                 
                 <div class="contact-item">
@@ -753,13 +795,13 @@
                 </div>
             </div>
             
-            <div style="margin-top: 40px;">
-                <p style="font-size: 1rem; margin-bottom: 20px;">Retrouvez-moi aussi sur :</p>
-                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="https://linkedin.com/in/jonathan-godwin-bakeloula" target="_blank" style="color: white; text-decoration: none; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 25px; transition: background 0.3s ease;">
+            <div class="social-links">
+                <p>Retrouvez-moi aussi sur :</p>
+                <div>
+                    <a href="https://linkedin.com/in/jonathan-godwin-bakeloula" target="_blank">
                         💼 LinkedIn
                     </a>
-                    <a href="https://github.com/jonathan-godwin" target="_blank" style="color: white; text-decoration: none; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 25px; transition: background 0.3s ease;">
+                    <a href="https://github.com/jonathan-godwin" target="_blank">
                         💻 GitHub
                     </a>
                 </div>
@@ -777,7 +819,7 @@
         // Animation au scroll
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
@@ -792,7 +834,7 @@
             observer.observe(el);
         });
 
-        // Smooth scroll pour les liens de navigation
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -803,28 +845,6 @@
                         block: 'start'
                     });
                 }
-            });
-        });
-
-        // Animation des cards au survol
-        document.querySelectorAll('.card, .interest-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Animation des tech tags
-        document.querySelectorAll('.tech-tag, .learning-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.1)';
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
             });
         });
     </script>
