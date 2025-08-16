@@ -273,6 +273,16 @@ section {
     color: #a855f7;
 }
 
+.project-card h3 > a {
+    text-decoration: none;
+    color: #a855f7;
+}
+
+.project-card h3 > a:hover {
+    text-decoration: underline;
+    color: #a855f7;
+}
+
 .project-card .project-type {
     font-size: 0.9rem;
     color: #fb923c;

@@ -1,0 +1,14 @@
+Ce qu il faut faire
+-function  creation grille et generation couleurs
+-functionn selection couleur par click sur case
+-function affecter couleur
+-nombre de coups
+-est remplie
+-mode defi ou remplir
+
+//
+colorier adjacent;
+demander taille;
+compteur;
+victoire;
+

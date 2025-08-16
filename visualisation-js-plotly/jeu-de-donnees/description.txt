@@ -1,0 +1,27 @@
+C'est quoi le projet : Consommation d'électricité en France entre 2011 et 2023
+
+Lien vers le jeu de données : 
+
+Pourquoi ce jeu de données ?
+L'Électricité est un élément majeur dans la lutte contre le CC.
+Il est indispensable de comprendre son évolution à travers le temps
+afin d'adapter les politiquues et de prendre des décisions adéquates.
+
+Structure du code HTML
+
+div.conso-region
+div.conso-elec
+div.conso-sect
+
+Pour appliquer les filtres, il faut juste modifier
+le contenu de la page.
+
+Quels sont les filtres ?
+
+Filtre div.conso-region = select sur l'année
+Filtre div.conso-sect = select sur le secteur
+Filtres div.conso-elec = select sur chacune des variables (opérateur, secteur, region)
+
+Ajout potentiel
+
+Afficher une jauge montrant l'évolution d'une année à une autre

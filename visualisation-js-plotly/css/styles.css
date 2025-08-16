@@ -1,0 +1,318 @@
+/* Dashboard CSS Simplifié et Moderne */
+
+/* Couleurs principales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #2c3e50;
+}
+
+/* Header Dashboard */
+header {
+    background: #2c3e50;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Navigation moderne */
+.navbar {
+    background: transparent !important;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: #ecf0f1 !important;
+    background: rgba(255,255,255,0.1);
+    padding: 10px 20px !important;
+    margin: 0 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navbar-brand:hover {
+    background: #3498db;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Zone principale */
+main {
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Zone de chargement fichier */
+#load {
+    background: white;
+    border: 3px dashed #3498db;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#load p {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+#load button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#load button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.4);
+}
+
+#load input {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Conteneur des cartes */
+.container-fluid.bg-light.shadow {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Cartes Dashboard */
+div[boite] {
+    background: white;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-left: 5px solid #3498db;
+    flex: 1;
+    min-width: 500px;
+    max-width: 700px;
+    min-height: 400px;
+    transition: all 0.3s;
+}
+
+div[boite]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-left-color: #e74c3c;
+}
+
+div[boite]:nth-child(even) {
+    border-left-color: #27ae60;
+}
+
+div[boite]:nth-child(even):hover {
+    border-left-color: #f39c12;
+}
+
+/* Titres des cartes */
+div[boite] h2 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+u {
+    text-decoration: none;
+    background: linear-gradient(120deg, #3498db 0%, #3498db 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+}
+
+/* Selects modernes */
+select {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    margin: 5px;
+}
+
+select:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+select:focus {
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.3);
+}
+
+/* Footer Dashboard */
+.footer-dark {
+    background: #2c3e50;
+    color: #bdc3c7;
+    padding: 40px 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-dark address {
+    margin: 10px;
+    font-style: normal;
+}
+
+.footer-dark strong {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+/* Images */
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+#var {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+/* Pages d'explication */
+.text-center {
+    background: white;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.text-center p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-center strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Zones des graphiques */
+div[boite] > div[id*="donnees-"] {
+    min-height: 300px;
+    width: 100%;
+}
+
+/* Responsive simple */
+@media (max-width: 1400px) {
+    div[boite] {
+        min-width: 400px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1200px) {
+    div[boite] {
+        min-width: 350px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    div[boite] {
+        margin: 10px 0;
+        min-width: auto;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .navbar-brand {
+        margin: 5px;
+        padding: 8px 16px !important;
+        font-size: 14px;
+    }
+    
+    .footer-dark {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #var {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Effet de chargement simple */
+div[boite] {
+    opacity: 0;
+    animation: slideUp 0.6s forwards;
+}
+
+div[boite]:nth-child(1) { animation-delay: 0.1s; }
+div[boite]:nth-child(2) { animation-delay: 0.2s; }
+div[boite]:nth-child(3) { animation-delay: 0.3s; }
+div[boite]:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
