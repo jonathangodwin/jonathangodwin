@@ -1,7 +1,7 @@
 const sep = ';';
 
 // Nom du fichier CSV à charger en dur - MODIFIEZ CE CHEMIN SELON VOTRE FICHIER
-const CSV_FILE_PATH = '../jeu-de-donnees/consommation-annuelle-d-electricite-et-gaz-par-region.csv';
+const CSV_FILE_PATH = './jeu-de-donnees/consommation-annuelle-d-electricite-et-gaz-par-region.csv';
 
 /* Renvoie sous forme d'une liste les valeurs contenues 
  dans une chaîne de caractère en utilisant le séparateur
